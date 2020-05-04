@@ -17,7 +17,7 @@ func main() {
 
 	// insert 1
 	ul.Add(1)
-
+	ul.Add(212)
 	// ensure we get it back!
 	fmt.Println(ul.Get())
 }

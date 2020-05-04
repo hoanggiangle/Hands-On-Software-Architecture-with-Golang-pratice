@@ -4,18 +4,25 @@
 
 package list
 
+// The gogenerate command is used to create multiple instantiations from the generic type
+// NOTE the replacement of tag "Uint" - It's important that all elements below start with that
+
+// UintList is the generic FIFO queue
 type UintList struct {
 	list []uint
 }
 
+// NewUintList creates a new list
 func NewUintList() *UintList {
 	return &UintList{list: []uint{}}
 }
 
+// Add inserts an element to the end of the list
 func (l *UintList) Add(v uint) {
 	l.list = append(l.list, v)
 }
 
+// Get pops the element from the head of the list
 func (l *UintList) Get() uint {
 	r := l.list[0]
 	l.list = l.list[1:]
